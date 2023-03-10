@@ -7,7 +7,7 @@ tags: [Linux, Escalada]
 ---
 ## Escalada
 
-Una vez accedido al sistema objetivo y teniendo la consola en condiciones después del tratamiento de la tty(en el cajón verde) empiezo a buscar formas de escalar priviligios.
+Una vez accedido al sistema objetivo y teniendo la consola en condiciones, después del tratamiento de la tty(en el cajón verde), empiezo a buscar formas de escalar priviligios.
 
 Esta es la estructura o **método** que suelo usar:
 ```
@@ -23,9 +23,9 @@ Esta es la estructura o **método** que suelo usar:
 [gtfobins]: https://gtfobins.github.io/ 
 En cuanto a permiso de sudo o suid me apoyo en la página [GTFObins][gtfobins]
 
-No todas las tareas programadas estan en el crontab, hay otras rutas. Esta por ejemplo el systemctl de antes. Visto Time.  
+No todas las tareas programadas están en el crontab, hay otras rutas. Esta por ejemplo el systemctl de antes. Visto Time.  
 
-Si no encontramos nada de momento en cuanto a tareas programadas podremos usar pspy(en github lo encontrarás) o crearnos un script rápido que las detecte, comunmente lo llamo procmon porque así lo llama S4vitar y asi se quedo -visto en máquina Meta y Time por ejemplo). Pero antes de esto prefiero echar un vistazo por otro lado, por ejemplo buscando strings interesantes(config, password, passwd) en determinadas rutas como la ruta web en local:
+Si no encontramos nada de momento en cuanto a tareas programadas podremos usar pspy(en github lo encontrarás) o crearnos un script rápido que las detecte, comunmente lo llamo **procmon** porque así lo llama S4vitar y así se quedo -visto en máquina Meta y Time por ejemplo). Pero antes de esto prefiero echar un vistazo por otro lado, por ejemplo buscando strings interesantes(config, password, passwd) en determinadas rutas como la de alojamiento de la web:
 
 En `var/www/html` hacer un:
 ```
@@ -47,7 +47,7 @@ O sin opción type. Puedes quitar rutas que no te interesen, por ejemplo:
 > find . -type f -user <useractual> 2>/dev/null | grep -v -E "proc|var"   
 ```
 
-¡ Ah!. Podrias hacer lo mismo con otros usuarios:  
+¡ Ah!. Podrías hacer lo mismo con otros usuarios:  
 `grep "sh$" /etc/passwd`  (y ahora lo mismo de antes pero cambiando de user).  
 También prueba esto:  
 ```
@@ -75,4 +75,4 @@ while true;  do
 done
 ```
 
-Y si nada uso la herramienta **linpeas** de Carlos ¡Polopo!, en github esta. Esta herramienta se encarga de detectar vias para escalar privilegios. Se puede usar para la OSCP y otros porque no te automatiza la escalada, solo es un reconocimento.
+Y si nada uso la herramienta **linpeas** de Carlos ¡Polopo!, en github está. Esta herramienta se encarga de detectar vías para escalar privilegios. Se puede usar para la OSCP y otros porque no te automatiza la escalada, solo es un reconocimento.
