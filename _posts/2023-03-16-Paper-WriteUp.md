@@ -194,7 +194,7 @@ nikto -host http://10.10.11.143
 ```
 Entramos a ese subdominio encontrado desde el navegador, donde nos encontraremos, esta vez sí, una página diferente:
 
-![Nueva-Web]({{ 'assets/img/writeups/Paper/webnueba.png' | relative_url }}){: .center-image }
+![Nueva-Web]({{ 'assets/img/writeups/Paper/NuevaWeb.png' | relative_url }}){: .center-image }
 
 Esta página está basada en la serie The Ofice, me partí el culo con esta serie. Pero sigamos..  
 Buscando por el código fuente y con el plugin de Wappalyzer descubrimos que es un WordPres. Pero desde el código fuente pude ver la versión justa, estoy ante un Wordpress 5.2.3. Antes de buscar si esta versión tiene alguna vulnerabilidad pública echo un vistazo rápido a la web. Encuentro un consejo a Michael: "Deberías eliminar el contenido "Secret" de tus borradores, no es tan seguro". Ahora si busco vulns de esa versión del Wordpress
