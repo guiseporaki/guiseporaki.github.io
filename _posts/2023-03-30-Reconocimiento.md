@@ -1,5 +1,5 @@
 ---
-title: Trick WriteUp
+title: Reconocimiento
 date: 2023-03-30
 categories: [Linux, Cajón de Arriba]
 tags: [nmap]
