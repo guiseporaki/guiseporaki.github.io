@@ -1,6 +1,6 @@
 ---
 title: Trick WriteUp
-date: 2023-03-21
+date: 2023-03-30
 categories: [Linux, Cajón de Arriba]
 tags: [nmap]
 ---
