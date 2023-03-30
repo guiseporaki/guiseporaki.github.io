@@ -2,7 +2,7 @@
 title: Escalada en Linux
 author: guiseporaki
 date: 2023-02-24
-categories: [Linux]
+categories: [Linux, Cajón de Arriba]
 tags: [Linux, Escalada]
 ---
 ## Escalada
