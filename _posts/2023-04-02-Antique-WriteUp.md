@@ -2,7 +2,7 @@
 title: Antique WriteUp
 date: 2023-04-02
 categories: [WriteUps, Máquinas Linux]
-tags: []
+tags: [UDP, Telnet, SNMP, CVE]
 image:
   path: ../../assets/img/writeups/Antique/antique.jpg
   width: 528
