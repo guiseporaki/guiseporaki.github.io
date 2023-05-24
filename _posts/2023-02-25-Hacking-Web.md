@@ -25,7 +25,7 @@ Ahora al lío, empecemos con los ataques via web.
 
 ___
 
-## SSTI - Service Side Template Attack
+## SSTI - Service Side Template Injection
 
 ### **¿Qué es?**
 
@@ -147,7 +147,7 @@ También puedes probar el de [payloadsAllTheThings][patt], el que pone **"Exploi
 
 ---
 
-## SSRF - Server Side Template Inyection
+## SSRF - Server Side Request Forgery
 
 ### **¿Qué es?**
 
