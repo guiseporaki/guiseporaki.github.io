@@ -104,7 +104,7 @@ Abajo tiene alguna cosilla más, pero todas redirigen a la misma página login.p
 
 Al probar a logearnos con un usuario cualquiera, en mi caso probe admin:admin nos muestra que el "usuario o contraseña es inválido" con lo que parece no dar pistas si un usuario es válido, y lo interesante es que en la url se muestra un parámetro:
 
-![UrlParam]({{ 'assets/img/writeups/Timing/urlParam.png' | relative_url }}){: .center-image }
+![UrlParam]({{ 'assets/img/writeups/Timing/urlparam.png' | relative_url }}){: .center-image }
 
 En el valor del parámetro podría probar algunas inyecciones o ataques LFI. Mando estas en el lugar de true:
 ```
