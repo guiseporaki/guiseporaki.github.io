@@ -10,7 +10,7 @@ image:
   alt: Banner Haystack
 ---
 
-Máquina bastante tipo CTF. Tuve que analizar una imagen para encontrar una pista, siguienda la pista y enumerando el servicio ElasticSearch encontraba las credenciales para ssh. Luego nos aprovechamos del servicio de kibana para convertirnos en otro usuario.
+Máquina muy tipo CTF. Tuve que analizar una imagen para encontrar una pista, siguienda la pista y enumerando el servicio ElasticSearch encontraba las credenciales para ssh. Luego nos aprovechamos del servicio de kibana para convertirnos en otro usuario.
 
 Para la escalada a root descubrimos unos archivos de configuración que parecen ejecutarse a intervalos regulares de tiempo y ejecutan como root el comando que nosotras escribamos en un fichero.
 
