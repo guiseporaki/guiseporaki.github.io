@@ -1,9 +1,13 @@
 ---
-title: Método Hacking Web
-author: guiseporaki
+title: Vulnerabilidades 1
 date: 2023-02-24
-categories: [Hacking Web]
+categories: [Hacking Web, Abrir con cuidado]
 tags: [SSTI, XSS, XXE, LFI, RFI, Deserialization Attack, SQLi, Fuerza Bruta, XSRF/CSRF]
+image:
+  path: ../../assets/img/HackingWeb/AbrirConCuidado/vulns1.jpg
+  width: 528
+  height: 340
+  alt: Banner Vulns1
 ---
 
 # Método básico para hacking web

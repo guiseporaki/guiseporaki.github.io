@@ -2,7 +2,7 @@
 title: Pasar Archivos
 author: guiseporaki
 date: 2023-02-24
-categories: [Linux, Cajon Verde]
+categories: [Linux, Cajón Verde]
 tags: [Linux, Transferencia Archivos]
 ---
 ## Maneras de pasar archivos entre máquinas

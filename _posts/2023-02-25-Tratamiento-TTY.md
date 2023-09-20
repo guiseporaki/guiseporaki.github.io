@@ -2,7 +2,7 @@
 title: Tratamiento de la TTY
 author: guiseporaki
 date: 2023-02-24
-categories: [Linux, Cajon Verde]
+categories: [Linux, Cajón Verde]
 tags: [Linux, Tratamiento TTY]
 ---
 ## Tratamiento de la tty
