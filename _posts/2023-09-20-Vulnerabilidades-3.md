@@ -153,7 +153,7 @@ Hay alguno jwt que no requieren de la tercera parte, de la firma, y es porque en
 
 El segundo caso más probable es que esté la firma por detrás y que haya que averiguarla para alterar los campos y que sea válidos. Si el secreto -la clave- no es díficil quizás podramos averiguarla.
 
-Recomiendo ver algunas máquinas usadas con este tipo de ataque. Puedes usar esta [https://machines-javiermolines.vercel.app/](página) para filtrar por tipo de ataque en las máquinas realizadas por S4vitar. Una de las máquinas se llama **Secret**.
+Recomiendo ver algunas máquinas usadas con este tipo de ataque. Puedes usar esta [página](https://machines-javiermolines.vercel.app/) para filtrar por tipo de ataque en las máquinas realizadas por S4vitar. Una de las máquinas se llama **Secret**.
 
 - - - 
 
