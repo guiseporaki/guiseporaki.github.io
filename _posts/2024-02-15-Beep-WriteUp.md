@@ -10,6 +10,7 @@ image:
   alt: Banner Beep
 ---
 
+¡Hola!. En esta máquina vemos un LFI, explotable gracias a una vulnerabilidad del servicio Asterix. Gracias al LFI vemos recursos interesantes con los cuales posteriormente explotar la máquina de varias formas; una desde dentro del servicio webmin y otra con una ataque shellshock.
 
 ## Reconocimiento
 
