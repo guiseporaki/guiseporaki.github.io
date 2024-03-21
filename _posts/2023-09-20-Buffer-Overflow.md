@@ -1,13 +1,13 @@
 ---
-title: Buffer Overflow
+title: Basic BoF Windows 32bits
 date: 2023-09-20
 categories: [Linux, Cajón que no cierra]
 tags: [Buffer Overflow]
 image:
-  path: ../../assets/img/Linux/CajonNoCierra/buffer.png
+  path: ../../assets/img/Linux/CajonNoCierra/basicBofWindows32/buffer.png
   width: 528
   height: 340
-  alt: Banner BufferOverflow
+  alt: Banner BasicBofWindows
 ---
 
 Mostraré como realizar un ataque buffer overflow (BoF) sin protecciones, el más básico pero es el que cae actualmente en certificaciones como el **eCPPT** y el **OSCP** así que de lujo. Nos preparan para esas certificaciones.  Veréis que la metodología de los dos BoF es igual.
